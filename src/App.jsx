@@ -1,6 +1,8 @@
+import Diagnosis_to_mastery from "./sections/Diagnosis_to_mastery";
+import Core_Loop from './sections/Core_Loop'
 import Hero from './sections/Hero'
 import './App.css'
-import Core_Loop from './sections/Core_Loop'
+
 
 function App() {
 
@@ -8,8 +10,9 @@ function App() {
     <>
       <Hero />
       <Core_Loop />
+      <Diagnosis_to_mastery />      
     </>
-  )
+  );
 }
 
-export default App
+export default App;
