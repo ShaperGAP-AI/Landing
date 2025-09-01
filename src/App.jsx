@@ -10,7 +10,7 @@ function App() {
     <>
       <Hero />
       <Core_Loop />
-      <Diagnosis_to_mastery />      
+      <Diagnosis_to_mastery />
     </>
   );
 }
