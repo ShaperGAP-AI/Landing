@@ -1,15 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import Hero from './sections/Hero'
 import './App.css'
+import Core_Loop from './sections/Core_Loop'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <Hero />
+      <Core_Loop />
     </>
   )
 }
