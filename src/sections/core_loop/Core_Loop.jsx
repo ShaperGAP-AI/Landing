@@ -19,7 +19,10 @@ export default function Core_Loop() {
 
   const rotateDisc = useTransform(scrollYProgress, [0, 1], [0, 360]);
   const rotateBubble = useTransform(scrollYProgress, [0, 1], [0, -360]);
-  const rotateArrow = useTransform(scrollYProgress, [0, 1], [0, 180]);
+  const translatePilePurpleCard = useTransform(scrollYProgress, [0.70, 0.75], [-450, 0]);
+  const translatePileBlueCard = useTransform(scrollYProgress, [0.65, 0.70], [-440, 0]);
+  const translatePileGreenCard = useTransform(scrollYProgress, [0.60, 0.65], [-430, 0]);
+  const translatePileYellowCard = useTransform(scrollYProgress, [0.55, 0.60], [-420, 0]);
 
   return (
     <div className="flex flex-col items-center gap-20 py-20 px-5" ref={coreLoopRef}>
@@ -102,10 +105,10 @@ export default function Core_Loop() {
         <div className="flex flex-col gap-10 items-center h-[90vh] w-full p-5">
           <h1 className="text-5xl text-center text-black font-extrabold">EVOLUTION SYSTEM</h1>
           <div className="w-full h-full flex flex-col items-center relative">
-            <img src={PolygonYellow} alt="" className="absolute h-[40vw]" style={{ bottom: "0%" }} />
-            <img src={PolygonGreen} alt="" className="absolute h-[40vw]" style={{ bottom: "15%" }} />
-            <img src={PolygonBlue} alt="" className="absolute h-[40vw]" style={{ bottom: "30%" }} />
-            <img src={PolygonPurple} alt="" className="absolute h-[40vw]" style={{ bottom: "70%" }} />
+            <motion.img src={PolygonYellow} alt="" className="absolute h-[40vw]" style={{ translateY: translatePileYellowCard, bottom: "0%" }} />
+            <motion.img src={PolygonGreen} alt="" className="absolute h-[40vw]" style={{ translateY: translatePileGreenCard, bottom: "5%" }} />
+            <motion.img src={PolygonBlue} alt="" className="absolute h-[40vw]" style={{ translateY: translatePileBlueCard, bottom: "10%" }} />
+            <motion.img src={PolygonPurple} alt="" className="absolute h-[40vw]" style={{ translateY: translatePilePurpleCard, bottom: "15%" }} />
           </div>
         </div>
       </div>

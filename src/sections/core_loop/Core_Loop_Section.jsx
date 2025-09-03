@@ -8,6 +8,7 @@ export default function Core_Loop_Section() {
       <Shaper_Gap_Here />
       <Core_Loop />
       <Evolution_Based_Learning />
+      <div className="h-screen"></div>
     </div>
   );
 }
