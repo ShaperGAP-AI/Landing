@@ -34,6 +34,10 @@ body {
     radial-gradient(at 80% 90%, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 70%);
 }
 
+.radial-gradient-purple {
+  background: radial-gradient(circle, var(--lightpurple) 0%, var(--darkpurple) 100%);
+}
+
 .orbit-image {
   position: absolute;
   width: 50px; /* Tamaño por defecto */
