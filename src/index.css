@@ -33,3 +33,80 @@ body {
     radial-gradient(at 70% 80%, rgba(68, 85, 243, 0.863) 0%, rgba(255, 255, 255, 0) 70%),
     radial-gradient(at 80% 90%, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 70%);
 }
+
+.orbit-image {
+  position: absolute;
+  width: 50px; /* Tamaño por defecto */
+  height: 50px;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: 1;
+}
+
+/* ---------------------------------- PC Styles (min-width) ---------------------------------- */
+
+@media (min-width: 769px) {
+  .orbit-image {
+    width: 50px; /* Tamaño en PC */
+    height: 50px;
+  }
+  
+  /* Posiciones y animaciones para 12 órbitas en PC */
+  .orbit-1 { top: 10%; left: 10%; animation-delay: 0s; }
+  .orbit-2 { top: 30%; left: 80%; animation-delay: 0,2s; }
+  .orbit-3 { top: 70%; left: 20%; animation-delay: 0.6s; }
+  .orbit-4 { top: 50%; left: 50%; animation-delay: 0.9s; }
+  .orbit-5 { top: 85%; left: 60%; animation-delay: 1.2s; }
+  .orbit-6 { top: 5%; left: 40%; animation-delay: 1.5s; }
+  .orbit-7 { top: 25%; left: 5%; animation-delay: 1.8s; }
+  .orbit-8 { top: 60%; left: 90%; animation-delay: 2.1s; }
+  .orbit-9 { top: 90%; left: 45%; animation-delay: 2.4s; }
+  .orbit-10 { top: 15%; left: 70%; animation-delay: 2.7s; }
+  .orbit-11 { top: 40%; left: 30%; animation-delay: 0.3s; }
+  .orbit-12 { top: 75%; left: 15%; animation-delay: 0.3s; }
+}
+
+/* --------------------------------- Mobile Styles (max-width) ------------------------------- */
+
+@media (max-width: 768px) {
+  .orbit-image {
+    width: 30px; /* Tamaño más pequeño en móvil */
+    height: 30px;
+  }
+  
+  /* Posiciones y animaciones solo para las 6 órbitas en móvil */
+  .orbit-1 { top: 15%; left: 15%; animation-delay: 0s; }
+  .orbit-2 { top: 40%; left: 85%; animation-delay: 3s; }
+  .orbit-3 { top: 75%; left: 25%; animation-delay: 6s; }
+  .orbit-4 { top: 20%; left: 60%; animation-delay: 9s; }
+  .orbit-5 { top: 60%; left: 50%; animation-delay: 12s; }
+  .orbit-6 { top: 85%; left: 80%; animation-delay: 15s; }
+}
+
+/* ------------------------------------ Shared Animations ------------------------------------ */
+
+@keyframes orbitAnimation {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+  25% { transform: translate(15vw, -10vh) scale(1.1); opacity: 0.9; }
+  50% { transform: translate(5vw, 20vh) scale(0.9); opacity: 0.6; }
+  75% { transform: translate(-10vw, -5vh) scale(1.2); opacity: 1; }
+  100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+}
+
+@keyframes orbitAnimation2 {
+  0% { transform: translate(0, 0) scale(0.9); opacity: 0.8; }
+  25% { transform: translate(-10vw, 20vh) scale(1.2); opacity: 1; }
+  50% { transform: translate(5vw, -30vh) scale(1); opacity: 0.7; }
+  75% { transform: translate(-30vw, 10vh) scale(0.8); opacity: 0.9; }
+  100% { transform: translate(0, 0) scale(0.9); opacity: 0.8; }
+}
+
+/* Asignar las animaciones */
+.orbit-1, .orbit-3, .orbit-5, .orbit-7, .orbit-9, .orbit-11 {
+  animation-name: orbitAnimation;
+}
+
+.orbit-2, .orbit-4, .orbit-6, .orbit-8, .orbit-10, .orbit-12 {
+  animation-name: orbitAnimation2;
+}
