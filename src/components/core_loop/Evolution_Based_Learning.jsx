@@ -2,8 +2,8 @@ import Icosahedron from "../../assets/icosahedron.png";
 
 export default function Evolution_Based_Learning() {
   return (
-    <div className="w-full p-5">
-      <div className="flex flex-col gap-2 w-full bg-foreground rounded-lg p-5">
+    <div className="flex justify-center w-full">
+      <div className="flex flex-col gap-2 w-full max-w-6xl bg-foreground rounded-lg p-5">
         <h1 className="text-3xl text-purple font-bold">Introducing Evolution-Based Learning (EBL)</h1>
         <ul className="flex flex-col gap-2">
           <li className="flex items-center gap-2 text-black text-2xl font-bold">
