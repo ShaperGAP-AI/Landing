@@ -4,9 +4,8 @@ import { motion, useInView } from "framer-motion";
 
 export default function Why_Exist() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 }); // Detecta cuando el 50% de la sección está visible
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
 
-  // Define las variantes para las palabras.
   const wordVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -20,7 +19,6 @@ export default function Why_Exist() {
       ref={ref}
       className="relative min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden"
     >
-      {/* Fondo decorativo (no necesita animación con scroll) */}
       <motion.div
         aria-hidden="true"
         className="absolute inset-0 z-0 flex"
@@ -43,9 +41,7 @@ export default function Why_Exist() {
         />
       </motion.div>
 
-      {/* Contenido principal con animaciones */}
       <section className="relative z-10 text-center">
-        {/* WHY */}
         <motion.h1
           className="text-[194px] leading-none mb-10"
           style={{
@@ -56,13 +52,12 @@ export default function Why_Exist() {
           }}
           variants={wordVariants}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"} // Anima solo si está visible
+          animate={isInView ? "visible" : "hidden"}
           transition={{ duration: 0.4, delay: 0.6 }}
         >
           WHY
         </motion.h1>
 
-        {/* SHAPER */}
         <motion.h2
           className="text-[194px] leading-none mb-10"
           style={{
@@ -73,13 +68,12 @@ export default function Why_Exist() {
           }}
           variants={wordVariants}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"} // Anima solo si está visible
+          animate={isInView ? "visible" : "hidden"}
           transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
         >
           SHAPER
         </motion.h2>
 
-        {/* EXISTS */}
         <motion.h3
           className="text-[194px] leading-none"
           style={{
@@ -90,7 +84,7 @@ export default function Why_Exist() {
           }}
           variants={wordVariants}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"} // Anima solo si está visible
+          animate={isInView ? "visible" : "hidden"}
           transition={{ delay: 2.0, duration: 0.4, ease: "easeIn" }}
         >
           EXISTS
