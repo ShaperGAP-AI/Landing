@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import fondoCuadros from "../assets/cuadros-fondo-liso.png";
+import FondoCuadros from "../components/FondoCuadros";
 
 import lineaCurva from "../assets/linea-curva.png";
 
@@ -56,11 +56,8 @@ export default function Diagnosis_to_mastery() {
 
   return (
     <div className="w-full lg:h-screen text-center py-20 relative overflow-hidden">
-      <div className="w-full h-screen flex absolute top-0 left-0">
-        <img className="w-1/2" src={fondoCuadros} alt="Fondo de cuadros" />
-        <img className="w-1/2" src={fondoCuadros} alt="Fondo de cuadros" />
-      </div>
-
+      <FondoCuadros />
+      
       <h1 className='text-xl md:text-5xl mb-8 font-bold'>
         From Diagnosis to Mastery — <br /> <span className="text-lightpurple">Your Growth, Engineered.</span>
       </h1>
