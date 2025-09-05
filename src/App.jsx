@@ -5,12 +5,14 @@ import Diagnosis_to_mastery from "./sections/Diagnosis_to_mastery";
 import Verified_evolution from "./sections/Verified_evolution";
 
 import "./App.css";
+import Reason_Section from "./sections/Reason_Section";
 
 function App() {
   return (
     <>
       <Hero />
       <Why_Exist />
+      <Reason_Section />
       <Core_Loop_Section />
       <Diagnosis_to_mastery />
       <Verified_evolution />
