@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
-import ImgBackground from "../assets/cuadros-fondo-liso.png";
+import FondoCuadros from "../components/FondoCuadros";
 import { motion, useInView } from "framer-motion";
 
 export default function Why_Exist() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const isInView = useInView(ref, { once: false, amount: 0.5 });
 
   const wordVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -17,38 +17,17 @@ export default function Why_Exist() {
   return (
     <main
       ref={ref}
-      className="relative min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
-      <motion.div
-        aria-hidden="true"
-        className="absolute inset-0 z-0 flex"
-      >
-        <div
-          className="w-1/2"
-          style={{
-            backgroundImage: `url(${ImgBackground})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-        <div
-          className="w-1/2"
-          style={{
-            backgroundImage: `url(${ImgBackground})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-      </motion.div>
+      <FondoCuadros />
 
       <section className="relative z-10 text-center">
         <motion.h1
-          className="text-[194px] leading-none mb-10"
+          className="mb-6 text-[clamp(2.5rem,10vw,12rem)] leading-none tracking-normal"
           style={{
             fontFamily: "Urbanist, sans-serif",
             fontWeight: 100,
             color: "#D9D9D9",
-            lineHeight: "100%",
           }}
           variants={wordVariants}
           initial="hidden"
@@ -59,12 +38,11 @@ export default function Why_Exist() {
         </motion.h1>
 
         <motion.h2
-          className="text-[194px] leading-none mb-10"
+          className="mb-6 text-[clamp(3rem,11vw,13rem)] leading-none tracking-tight"
           style={{
             fontFamily: "Urbanist, sans-serif",
             fontWeight: 900,
             color: "#BE80FF",
-            lineHeight: "100%",
           }}
           variants={wordVariants}
           initial="hidden"
@@ -75,12 +53,11 @@ export default function Why_Exist() {
         </motion.h2>
 
         <motion.h3
-          className="text-[194px] leading-none"
+          className="text-[clamp(2.5rem,10vw,12rem)] leading-tight"
           style={{
             fontFamily: "Urbanist, sans-serif",
             fontWeight: 100,
             color: "#D9D9D9",
-            lineHeight: "100%",
           }}
           variants={wordVariants}
           initial="hidden"
