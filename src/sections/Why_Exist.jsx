@@ -1,107 +1,95 @@
-import React, { useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import React, { useRef } from "react";
+import ImgBackground from "../assets/cuadros-fondo-liso.png";
+import { motion, useInView } from "framer-motion";
 
 export default function Why_Exist() {
-  const [currentText, setCurrentText] = useState("why");
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
 
-  // Simulación de scroll para mostrar cada palabra
-  // En un caso real, usaría un hook como useInView para detectar la posición de scroll
-  useEffect(() => {
-    const timer1 = setTimeout(() => setCurrentText("shaper"), 2000); // Muestra "SHAPER" después de 2 segundos
-    const timer2 = setTimeout(() => setCurrentText("exists"), 4000); // Muestra "EXISTS" después de 4 segundos
-    const timer3 = setTimeout(() => setCurrentText("final"), 6000); // Muestra la última visual después de 6 segundos
-
-    return () => {
-      clearTimeout(timer1);
-      clearTimeout(timer2);
-      clearTimeout(timer3);
-    };
-  }, []);
-
-  // Variantes de animación para cada palabra
   const wordVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
     },
   };
 
   return (
-    <section
-      className="relative w-full min-h-screen flex flex-col items-center justify-center p-4"
-      style={{ backgroundColor: "var(--background)" }}
+    <main
+      ref={ref}
+      className="relative min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden"
     >
-      {/* Fondo de malla */}
-      <div
-        className="absolute inset-0 z-0 opacity-30"
-        style={{
-          backgroundImage: "radial-gradient(#ffffff33 1px, transparent 1px)",
-          backgroundSize: "20px 20px",
-        }}
-      />
+      <motion.div
+        aria-hidden="true"
+        className="absolute inset-0 z-0 flex"
+      >
+        <div
+          className="w-1/2"
+          style={{
+            backgroundImage: `url(${ImgBackground})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div
+          className="w-1/2"
+          style={{
+            backgroundImage: `url(${ImgBackground})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+      </motion.div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center text-center">
-        <AnimatePresence mode="wait">
-          {currentText === "why" && (
-            <motion.h1
-              key="why"
-              className="text-[#D9D8D9] font-thin text-[194px] leading-none"
-              variants={wordVariants}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-            >
-              WHY
-            </motion.h1>
-          )}
+      <section className="relative z-10 text-center">
+        <motion.h1
+          className="text-[194px] leading-none mb-10"
+          style={{
+            fontFamily: "Urbanist, sans-serif",
+            fontWeight: 100,
+            color: "#D9D9D9",
+            lineHeight: "100%",
+          }}
+          variants={wordVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          transition={{ duration: 0.4, delay: 0.6 }}
+        >
+          WHY
+        </motion.h1>
 
-          {currentText === "shaper" && (
-            <motion.h1
-              key="shaper"
-              className="text-[#BE80FF] font-black text-[194px] leading-none"
-              variants={wordVariants}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-            >
-              SHAPER
-            </motion.h1>
-          )}
+        <motion.h2
+          className="text-[194px] leading-none mb-10"
+          style={{
+            fontFamily: "Urbanist, sans-serif",
+            fontWeight: 900,
+            color: "#BE80FF",
+            lineHeight: "100%",
+          }}
+          variants={wordVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
+        >
+          SHAPER
+        </motion.h2>
 
-          {currentText === "exists" && (
-            <motion.h1
-              key="exists"
-              className="text-[#D9D8D9] font-thin text-[194px] leading-none"
-              variants={wordVariants}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-            >
-              EXISTS
-            </motion.h1>
-          )}
-
-          {currentText === "final" && (
-            <motion.div
-              key="final"
-              className="text-white text-center"
-              variants={wordVariants}
-              initial="hidden"
-              animate="visible"
-            >
-              <span className="text-[#D9D8D9] font-medium md:text-lg">WHY</span>
-              <span className="text-[#BE80FF] font-medium ml-2 md:text-lg">
-                SHAPER
-              </span>
-              <span className="text-[#D9D8D9] font-medium ml-2 md:text-lg">
-                EXISTS
-              </span>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    </section>
+        <motion.h3
+          className="text-[194px] leading-none"
+          style={{
+            fontFamily: "Urbanist, sans-serif",
+            fontWeight: 100,
+            color: "#D9D9D9",
+            lineHeight: "100%",
+          }}
+          variants={wordVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          transition={{ delay: 2.0, duration: 0.4, ease: "easeIn" }}
+        >
+          EXISTS
+        </motion.h3>
+      </section>
+    </main>
   );
 }
