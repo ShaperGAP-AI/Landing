@@ -4,7 +4,7 @@ import Core_Loop_Section from "./sections/Core_Loop_Section";
 import Diagnosis_to_mastery from "./sections/Diagnosis_to_mastery";
 import Verified_evolution from "./sections/Verified_evolution";
 
-import "./App.css";
+import "./index.css";
 
 function App() {
   return (

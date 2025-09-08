@@ -98,15 +98,17 @@ export default function Hero() {
           }}
           className='h-fit mt-68 lg:-mb-42 justify-center flex flex-col items-center text-center pb-4'
         >
-          <div className='flex justify-center items-end'>
-            <img className='h-12' src={Logo} alt="Logo" />
-            <h1 className='text-slate-900 text-4xl md:text-6xl font-sans font-bold'>Shaper</h1>
-          </div>
-          {/* New text that appears on scroll */}
-          <motion.div
-            style={{ opacity: newTextOpacity }}
-            className="mt-4"
-          >
+          <FadeInDiv>
+            <div className='flex justify-center items-end'>
+              <img className='h-12' src={Logo} alt="Logo" />
+              <h1 className='text-slate-900 text-4xl md:text-6xl font-sans font-bold'>Shaper</h1>
+            </div>
+          </FadeInDiv>
+            {/* New text that appears on scroll */}
+            <motion.div
+              style={{ opacity: newTextOpacity }}
+              className="mt-4"
+            >
             <FadeInDiv>
               <h2 className='text-xl md:text-6xl font-bold leading-tight'>
                 Unlock <span className="text-lightpurple">Who You’re</span>  <br />  <span className="text-lightpurple">Meant </span> to Become.

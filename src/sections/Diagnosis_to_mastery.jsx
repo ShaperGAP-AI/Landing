@@ -14,6 +14,9 @@ import tablet5 from "../assets/tablet5.png";
 import flecha from "../assets/flecha.png";
 import flechaTransparente from "../assets/flecha-transparente.png";
 
+import SplitText from "../animations/SplitText";
+import DragFromRight from "../animations/DragFromRight";
+
 export default function Diagnosis_to_mastery() {
   const [currentTablet, setCurrentTablet] = useState({ 
     src: tablet1, 
@@ -58,10 +61,17 @@ export default function Diagnosis_to_mastery() {
     <div className="w-full lg:h-screen text-center py-20 relative overflow-hidden">
       <FondoCuadros />
       
-      <h1 className='text-xl md:text-5xl mb-8 font-bold'>
-        From Diagnosis to Mastery — <br /> <span className="text-lightpurple">Your Growth, Engineered.</span>
-      </h1>
-
+      <SplitText
+        text="From Diagnosis to Mastery"
+        className='text-xl md:text-5xl lg:mb-8 mb-2 font-bold'
+        delay={0.5}
+      ></SplitText>
+      <SplitText
+        text="Your Growth, Engineered."
+        className='text-xl md:text-5xl mb-8 font-bold text-lightpurple'
+        delay={0.8}
+      ></SplitText>
+      
       <div className="flex lg:flex-row flex-col-reverse w-full justify-center relative">
         <div className="lg:w-2/5 relative">
           <AnimatePresence mode="wait">
@@ -99,27 +109,29 @@ export default function Diagnosis_to_mastery() {
           {/* SVG para la línea curva */}
           <img className="absolute z-0 h-98 left-0" src={lineaCurva} alt="linea curva" />
 
-          {tablets.map((tablet) => (
-            <div
-              key={tablet.id}
-              className={`inline-block m-6 cursor-pointer ${tablet.marginLeft} relative z-10`}
-              onClick={() => handlePointClick(tablet)}
-            >
-              {/* Círculo del punto */}
+          {tablets.map((tablet, index) => (
+            <DragFromRight delay={index * 0.1}>
               <div
-                className={`absolute left-[-20px] top-1/2 -translate-y-1/2 rounded-full transition-all duration-300 ${
-                  currentTablet.id === tablet.id
-                    ? 'w-4 h-4 shadow-lg radial-gradient-purple'
-                    : 'w-2 h-2 bg-gray-400'
-                }`}
-              />
-              <h2 className={`text-lg transition-all duration-300 ${currentTablet.id === tablet.id ? 'font-bold' : 'font-semibold'}`}>
-                {tablet.title}
-              </h2>
-            </div>
-          ))}
+                key={tablet.id}
+                className={`inline-block m-6 cursor-pointer ${tablet.marginLeft} relative z-10`}
+                onClick={() => handlePointClick(tablet)}
+              >
+                {/* Círculo del punto */}
+                <div
+                  className={`absolute left-[-20px] top-1/2 -translate-y-1/2 rounded-full transition-all duration-300 ${
+                    currentTablet.id === tablet.id
+                      ? 'w-4 h-4 shadow-lg radial-gradient-purple'
+                      : 'w-2 h-2 bg-gray-400'
+                  }`}
+                />
+                <h2 className={`text-lg transition-all duration-300 ${currentTablet.id === tablet.id ? 'font-bold' : 'font-semibold'}`}>
+                  {tablet.title}
+                </h2>
+              </div>
+            </DragFromRight>
+            ))}
+          </div>
         </div>
-      </div>
     </div>
   );
 }

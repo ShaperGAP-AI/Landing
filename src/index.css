@@ -34,6 +34,10 @@ body {
     radial-gradient(at 80% 90%, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 70%);
 }
 
+.perspective-1000 {
+  perspective: 1000px;
+}
+
 .radial-gradient-purple {
   background: radial-gradient(circle, var(--lightpurple) 0%, var(--darkpurple) 100%);
 }
