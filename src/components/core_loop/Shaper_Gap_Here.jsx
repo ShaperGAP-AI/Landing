@@ -6,7 +6,7 @@ import BgObject3 from "../../assets/core-loop-bg-object3.png";
 export default function Shaper_Gap_Here() {
   return (
     <div className="relative h-screen flex flex-col items-center justify-between py-20">
-      <h1 className="text-black text-6xl font-bold text-center px-20 z-10">
+      <h1 className="text-black text-4xl font-bold text-center px-20 z-10 sm:text-5xl lg:text-6xl">
         <span className="whitespace-nowrap">
           Shaper GAP<sup>&reg;</sup>{" "}
         </span>
@@ -17,8 +17,8 @@ export default function Shaper_Gap_Here() {
         <br className="sm:hidden" />
         <span className="text-darkpurple">That</span>
       </h1>
-      <div className="relative flex justify-center overflow-hidden pb-10">
-        <div className="bg-purple absolute bottom-[5%] h-[10%] w-[60%] rounded-[100%] blur-md"></div>
+      <div className="h-[80%] aspect-square relative flex justify-center">
+        <div className="bg-purple absolute bottom-0 h-[10%] w-[60%] rounded-[100%] blur-sm"></div>
         <img src={HeroCharacter} alt="" className="z-10" />
       </div>
       <img src={BgObject1} alt="" className="absolute left-[15vw] top-[32vh] h-20 blur-[1px] sm:top-[40vh] sm:h-40" />

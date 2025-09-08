@@ -1,16 +1,21 @@
-import Diagnosis_to_mastery from "./sections/Diagnosis_to_mastery";
-import Core_Loop_Section from "./sections/core_loop/Core_Loop_Section";
 import Hero from "./sections/Hero";
 import Why_Exist from "./sections/Why_Exist";
+import Core_Loop_Section from "./sections/Core_Loop_Section";
+import Diagnosis_to_mastery from "./sections/Diagnosis_to_mastery";
+import Verified_evolution from "./sections/Verified_evolution";
+
 import "./App.css";
+import Reason_Section from "./sections/Reason_Section";
 
 function App() {
   return (
     <>
       <Hero />
       <Why_Exist />
+      <Reason_Section />
       <Core_Loop_Section />
       <Diagnosis_to_mastery />
+      <Verified_evolution />
     </>
   );
 }
