@@ -117,7 +117,7 @@ export default function Verified_evolution() {
         </div>
         <div className='flex lg:mt-30 mt-10'>
           <div className='lg:w-3/5 w-full lg:h-fit mx-auto p-2 align-middle flex flex-col z-20 relative'>
-            <img className='absolute h-full top-0' src={boxLinked} alt="linked" />
+            <img className='absolute h-full top-0 left-0 w-full' src={boxLinked} alt="linked" />
             <div className='lg:mt-4 mt-20 mb-10 lg:mb:0 z-20'>
               {/* FadeInDiv */}
               <FadeInDiv duration={0.8} delay={0.2}>
