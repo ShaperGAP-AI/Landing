@@ -7,6 +7,7 @@
   --darkpurple: #6a51e1;
   --purple: #886fff;
   --lightpurple: #be80ff;
+  --lighterpurple: #bdafff;
 }
 
 @theme {
@@ -15,6 +16,7 @@
   --color-darkpurple: var(--darkpurple);
   --color-purple: var(--purple);
   --color-lightpurple: var(--lightpurple);
+  --color-lighterpurple: var(--lighterpurple);
 }
 
 body {
