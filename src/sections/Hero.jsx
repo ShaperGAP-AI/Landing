@@ -24,6 +24,12 @@ export default function Hero() {
     [1, 0]
   );
 
+  const backgroundDisplay = useTransform(
+    scrollY,
+    [0, 500],
+    ["inline", "none"]
+  );
+
   // Logo and title animations: diferente para móvil y PC
   const logoContainerTranslateY = useTransform(
     scrollY,
@@ -82,7 +88,7 @@ export default function Hero() {
       {/* Background that moves and fades */}
       <motion.div
         ref={ref}
-        style={{ opacity: backgroundOpacity }}
+        style={{ opacity: backgroundOpacity, display: backgroundDisplay }}
         className='multi-gradient-bg lg:h-screen h-full overflow-hidden fixed top-0 left-0 w-full z-0'
       >
       </motion.div>
