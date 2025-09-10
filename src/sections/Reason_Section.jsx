@@ -57,9 +57,9 @@ const Reason_Section = () => {
           <motion.img
             src={boyImg}
             alt="Sad boy"
-            className="w-40 sm:w-48 md:w-72 object-contain rotate-2 filter brightness-100 contrast-190 opacity-25 -mt-6 sm:-mt-8 md:-mt-10 md:-ml-8"
+            className="w-40 sm:w-48 md:w-72 object-contain rotate-2 filter brightness-100 contrast-190 opacity-2 -mt-6 sm:-mt-8 md:-mt-10 md:-ml-8"
             initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 0.25, x: 0 }}
+            whileInView={{ opacity: 0.2, x: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.8, ease: "easeIn" }}
           />
