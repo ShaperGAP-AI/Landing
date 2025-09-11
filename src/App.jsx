@@ -21,8 +21,8 @@ function App() {
       <Diagnosis_to_mastery />
       <Verified_evolution />
       <What_Will_Do />
-      <For_Professionals_Teams_Leaders />
       <Diagnostic_Sistem />
+      <For_Professionals_Teams_Leaders />
       <What_Users_Say />
     </>
   );
