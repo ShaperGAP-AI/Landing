@@ -3,9 +3,23 @@ import { motion } from "framer-motion";
 import FondoCuadros from "../components/FondoCuadros";
 import girlImg from "../assets/womenWhyExists.png";
 import boyImg from "../assets/menWhyExists.png";
+import girlCenter from "../assets/girlCenter.png";
+import chessPiece from "../assets/chessImg.png";
 
 const Reason_Section = () => {
+  const piecesPattern = [
+    "gray",
+    "white",
+    "gray",
+    "gray",
+    "white",
+    "gray",
+    "gray",
+    "white",
+    "gray",
+  ];
   return (
+    <>
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* Fondo cuadriculado */}
       <FondoCuadros />
@@ -37,21 +51,21 @@ const Reason_Section = () => {
           />
 
           {/* Texto central */}
-<motion.h2
-  className="text-2xl sm:text-3xl md:text-5xl font-bold leading-snug mx-2 text-center"
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: false }}
-  transition={{ duration: 0.8, ease: "easeIn", delay: 0.2 }}
->
-  Traditional Education
-  <br />
-  <span className="px-4 py-1 rounded-full bg-[#FC3952] text-white shadow-lg shadow-black/40">
-    Failed
-  </span>
-  <br />
-  You.
-</motion.h2>
+          <motion.h2
+            className="text-2xl sm:text-3xl md:text-5xl font-bold leading-snug mx-2 text-center"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8, ease: "easeIn", delay: 0.2 }}
+          >
+            Traditional Education
+            <br />
+            <span className="px-4 py-1 rounded-full bg-[#FC3952] text-white shadow-lg shadow-black/40">
+              Failed
+            </span>
+            <br />
+            You.
+          </motion.h2>
 
           {/* Imagen derecha */}
           <motion.img
@@ -66,6 +80,62 @@ const Reason_Section = () => {
         </div>
       </div>
     </section>
+
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-background">
+  <FondoCuadros />
+
+  {/* Imagen chica */}
+  <div className="flex justify-center items-end flex-[1.2]">
+    <img
+      src={girlCenter}
+      alt="Girl center"
+      className="w-[312px] h-[786px] object-contain"
+      style={{ transformOrigin: "center bottom" }}
+    />
+  </div>
+
+{/* Base violeta debajo de la chica */}
+<div
+  className="absolute bottom-[193px] left-1/2 -translate-x-1/2
+             w-[180px] sm:w-[200px] lg:w-[240px] 
+             h-[40px] bg-[#886FFF] rounded-full blur-[13px] opacity-90"
+/>
+
+
+  {/* Globo izquierdo */}
+<motion.div
+  className="absolute left-[12%] top-[28%] w-[240px] sm:w-[280px] md:w-[340px] lg:w-[380px] 
+             bg-[#8B5CF6] text-white text-sm sm:text-base md:text-lg 
+             px-5 py-3 rounded-2xl shadow-lg"
+  initial={{ opacity: 0, x: -50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  <p>
+    You spent years in school... <br />
+    ...but no one taught you how to <b>lead</b>, stay calm under pressure,
+    or speak with clarity.
+  </p>
+</motion.div>
+
+{/* Globo derecho */}
+<motion.div
+  className="absolute right-[12%] top-[28%] w-[240px] sm:w-[280px] md:w-[340px] lg:w-[380px] 
+             bg-[#8B5CF6] text-white text-sm sm:text-base md:text-lg 
+             px-5 py-3 rounded-2xl shadow-lg"
+  initial={{ opacity: 0, x: 50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  <p>
+    91% of employers say <b>soft skills</b> are more important than hard
+    skills — but no one trains them.
+  </p>
+</motion.div>
+
+</section>
+
+      </>
   );
 };
 
