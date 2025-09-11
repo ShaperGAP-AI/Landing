@@ -1,45 +1,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import StudentPortrait from "../assets/student-portrait.png";
-import ProfessionalPortrait from "../assets/professional-portrait.png";
-import CareerShifterPortrait from "../assets/career-shifter-portrait.png";
-import EmployerPortrait from "../assets/employer-portrait.png";
-import MobileDNA from "../components/for_professionals_teams_leaders/MobileDNA";
-
-const publicTargets = [
-  {
-    id: Math.random().toString(16).slice(2),
-    portraitSrc: StudentPortrait,
-    knowledge: "Building foundational soft skills such as communication, collaboration, time management",
-    achievement: "Completing interactive challenges and diagnostic loops",
-    quality: "Learning to express ideas clearly and solve problems creatively",
-    progress: "Becoming confident, self-aware, and career-ready",
-  },
-  {
-    id: Math.random().toString(16).slice(2),
-    portraitSrc: ProfessionalPortrait,
-    knowledge: "Sharpening emotional intelligence, leadership, and decision-making",
-    achievement: "Applying skills in real scenarios and tough team dynamics",
-    quality: "Elevating clarity under pressure and trust in communication",
-    progress: "Growing into a stronger leader and better collaborator daily",
-  },
-  {
-    id: Math.random().toString(16).slice(2),
-    portraitSrc: CareerShifterPortrait,
-    knowledge: "Rebuilding confidence in new skills: adaptability, time mgmt, critical thinking",
-    achievement: "Navigating unfamiliar situations with guided simulations",
-    quality: "Relearning how to lead, communicate, and perform in a new role",
-    progress: "Transitioning with confidence and verifiable, real growth",
-  },
-  {
-    id: Math.random().toString(16).slice(2),
-    portraitSrc: EmployerPortrait,
-    knowledge: "Seeing real behavioral data, not self-reported traits",
-    achievement: "Tracking growth through challenges, not just test scores",
-    quality: "Measuring clarity, resilience, empathy & leadership in action",
-    progress: "Making smarter hiring, L&D, and team-building decisions based on verified skills",
-  },
-];
+import DNA from "../components/for_professionals_teams_leaders/DNA";
+import ArrowLeft from "../assets/flecha-izq.png";
+import ArrowRight from "../assets/flecha.png";
+import publicTargets from "../data/professionals_teams_leaders";
 
 export default function For_Professionals_Teams_Leaders() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -54,6 +18,16 @@ export default function For_Professionals_Teams_Leaders() {
     setCurrentIndex(i);
   }
 
+  function handleLeftArrowClick() {
+    setDirection(-1);
+    setCurrentIndex(currentIndex - 1);
+  }
+
+  function handleRightArrowClick() {
+    setDirection(1);
+    setCurrentIndex(currentIndex + 1);
+  }
+
   return (
     <div className="flex flex-col gap-5 multi-gradient-bg px-[4vw] pt-10">
       {/* HEADER */}
@@ -64,33 +38,59 @@ export default function For_Professionals_Teams_Leaders() {
         <p className="text-black/50">Every journey is different. Here’s how Shaper’s growth DNA fits each path.</p>
       </div>
       {/* SLIDE */}
-      <div className="flex flex-col gap-5 h-full py-5">
+      <div className="flex flex-col gap-10 h-full py-5 lg:h-screen lg:pb-0">
         {/* NAV */}
-        <div className="flex gap-5 mx-auto">
+        <div className="flex gap-5 mx-auto lg:w-[40vw] lg:justify-between">
           {publicTargets.map((portrait, i) => (
-            <div
-              key={`portrait-${portrait.id}`}
-              className={`relative transition cursor-pointer ${currentIndex === i ? "" : "saturate-0"}`}
-              onClick={() => handlePortraitClick(i)}
-            >
-              {currentIndex === i && (
-                <motion.div
-                  className="absolute -inset-1 rounded-full border-2 border-darkpurple"
-                  initial={{ scale: 0.5 }}
-                  animate={{ scale: 1 }}
-                ></motion.div>
-              )}
-              <img src={portrait.portraitSrc} alt={portrait.portraitAlt} className="relative z-10" />
+            <div key={`portrait-${portrait.id}`} className="h-15 aspect-square flex flex-col items-center">
+              <div
+                className={`h-full aspect-square relative transition cursor-pointer ${
+                  currentIndex === i ? "" : "saturate-0"
+                }`}
+                onClick={() => handlePortraitClick(i)}
+              >
+                {currentIndex === i && (
+                  <motion.div
+                    className="absolute -inset-1 rounded-full border-2 border-darkpurple"
+                    initial={{ scale: 0.5 }}
+                    animate={{ scale: 1 }}
+                  ></motion.div>
+                )}
+                <img src={portrait.portraitSrc} alt={portrait.portraitAlt} className="relative z-10" />
+              </div>
+              <span className={`text-nowrap text-black ${currentIndex === i ? "font-bold" : ""}`}>{portrait.name}</span>
             </div>
           ))}
         </div>
-        {/* MOBILE DNA */}
+        {/* DNA */}
         <AnimatePresence mode="popLayout" custom={direction}>
           <div
             key={`${publicTargets[currentIndex].id} + ${currentIndex}`}
-            className="w-full aspect-3/4 overflow-hidden lg:hidden"
+            className="relative aspect-3/4 overflow-hidden lg:h-full lg:m-auto lg:aspect-auto lg:flex"
           >
-            <MobileDNA info={publicTargets[currentIndex]} />
+            <div className="hidden h-[4%] w-[8%] absolute top-0 right-0 lg:inline">
+              <motion.button
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={handleLeftArrowClick}
+                className={`absolute top-0 bottom-0 left-0 flex cursor-pointer ${currentIndex === 0 ? "hidden" : ""}`}
+              >
+                <img src={ArrowLeft} alt="" />
+              </motion.button>
+              <motion.button
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={handleRightArrowClick}
+                className={`absolute top-0 bottom-0 right-0 flex cursor-pointer ${
+                  currentIndex === publicTargets.length - 1 ? "hidden" : ""
+                }`}
+              >
+                <img src={ArrowRight} alt="" />
+              </motion.button>
+            </div>
+            <DNA info={publicTargets[currentIndex]} />
           </div>
         </AnimatePresence>
       </div>
