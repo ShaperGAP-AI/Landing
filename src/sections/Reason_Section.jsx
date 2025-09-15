@@ -81,57 +81,79 @@ const Reason_Section = () => {
       </div>
     </section>
 
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-background">
+<section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-background">
   <FondoCuadros />
 
-  {/* Imagen chica */}
-  <div className="flex justify-center items-end flex-[1.2]">
-    <img
-      src={girlCenter}
-      alt="Girl center"
-      className="w-[312px] h-[786px] object-contain"
-      style={{ transformOrigin: "center bottom" }}
-    />
-  </div>
+<div className="relative flex flex-col items-center justify-end w-full">
+  {/* Glow: capa amplia y sutil (fondo) */}
+  <div
+    aria-hidden
+    style={{
+      position: "absolute",
+      bottom: "-6px",
+      width: "clamp(180px, 32vw, 3200px)",
+      height: "clamp(40px, 8vh, 160px)",
+      borderRadius: "50%",
+      background:
+        "radial-gradient(ellipse at center, rgba(136,111,255,0.25) 0%, rgba(136,111,255,0.12) 40%, transparent 70%)",
+      filter: "blur(25px)",
+      zIndex: 0,
+      pointerEvents: "none",
+      opacity: 1,
+      transform: "translateY(6%)",
+    }}
+  />
 
-{/* Base violeta debajo de la chica */}
-<div
-  className="absolute bottom-[193px] left-1/2 -translate-x-1/2
-             w-[180px] sm:w-[200px] lg:w-[240px] 
-             h-[40px] bg-[#886FFF] rounded-full blur-[13px] opacity-90"
-/>
+  {/* Glow: capa intermedia (color más definido) */}
+  <div
+    aria-hidden
+    style={{
+      position: "absolute",
+      bottom: "-2px",
+      width: "clamp(170px, 28vw, 270px)",
+      height: "clamp(36px, 6.6vh, 120px)",
+      borderRadius: "50%",
+      background:
+        "radial-gradient(ellipse at center, rgba(136,111,255,0.78) 0%, rgba(136,111,255,0.38) 30%, rgba(136,111,255,0.12) 55%, transparent 75%)",
+      filter: "blur(10px)",
+      zIndex: 1,
+      pointerEvents: "none",
+      transform: "translateY(3%)",
+    }}
+  />
 
+  {/* Glow: capa central y brillante (pequeña) */}
+  <div
+    aria-hidden
+    style={{
+      position: "absolute",
+      bottom: "2px",
+      width: "clamp(140px, 22vw, 230px)",
+      height: "clamp(20px, 4vh, 44px)",
+      borderRadius: "50%",
+      background:
+        "radial-gradient(ellipse at center, rgba(136, 111, 255, 1) 0%, rgba(136, 111, 255, 0.6) 35%, rgba(136, 111, 255, 0.15) 65%, transparent 85%)",
+      filter: "blur(10px)",
+      zIndex: 2,
+      pointerEvents: "none",
+      transform: "translateY(0%)",
+    }}
+  />
 
-  {/* Globo izquierdo */}
-<motion.div
-  className="absolute left-[12%] top-[28%] w-[240px] sm:w-[280px] md:w-[340px] lg:w-[380px] 
-             bg-[#8B5CF6] text-white text-sm sm:text-base md:text-lg 
-             px-5 py-3 rounded-2xl shadow-lg"
-  initial={{ opacity: 0, x: -50 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.8 }}
->
-  <p>
-    You spent years in school... <br />
-    ...but no one taught you how to <b>lead</b>, stay calm under pressure,
-    or speak with clarity.
-  </p>
-</motion.div>
-
-{/* Globo derecho */}
-<motion.div
-  className="absolute right-[12%] top-[28%] w-[240px] sm:w-[280px] md:w-[340px] lg:w-[380px] 
-             bg-[#8B5CF6] text-white text-sm sm:text-base md:text-lg 
-             px-5 py-3 rounded-2xl shadow-lg"
-  initial={{ opacity: 0, x: 50 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.8 }}
->
-  <p>
-    91% of employers say <b>soft skills</b> are more important than hard
-    skills — but no one trains them.
-  </p>
-</motion.div>
+  {/* Imagen (arriba de los glows) */}
+  <img
+    src={girlCenter}
+    alt="Girl center"
+    className="object-contain"
+    style={{
+      position: "relative",
+      zIndex: 10,
+      height: "clamp(400px, 70vh, 786px)",
+      width: "auto",
+      pointerEvents: "auto",
+    }}
+  />
+</div>
 
 </section>
 
