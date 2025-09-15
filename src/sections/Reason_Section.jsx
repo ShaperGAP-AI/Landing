@@ -131,9 +131,9 @@ const Reason_Section = () => {
 
 {/* Globo izquierdo */}
   <motion.div
-    className="absolute bg-[#8B5CF6] text-white px-5 py-3 rounded-2xl shadow-lg max-w-[380px]"
+    className="absolute bg-[#8B5CF6] text-white px-5 py-2 rounded-2xl shadow-lg max-w-[380px]"
     style={{
-      top: "15%", // alineado con el torso de la chica
+      top: "8%", // alineado con el torso de la chica
       left: "10%",
       transform: "translateY(-50%)",
       width: "clamp(220px, 28vw, 340px)",
@@ -151,9 +151,9 @@ const Reason_Section = () => {
 
   {/* Globo derecho */}
   <motion.div
-    className="absolute bg-[#8B5CF6] text-white px-5 py-3 rounded-2xl shadow-lg max-w-[380px]"
+    className="absolute bg-[#8B5CF6] text-white px-9 py-2 rounded-2xl shadow-lg max-w-[380px]"
     style={{
-      top: "15%",
+      top: "8%",
       right: "10%",
       transform: "translateY(-50%)",
       width: "clamp(220px, 28vw, 340px)",
@@ -162,11 +162,7 @@ const Reason_Section = () => {
     whileInView={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.8 }}
   >
-    <p className="text-sm sm:text-base md:text-lg">
-      91% of employers say <b>soft skills</b> are more important than hard
-      skills — but no
-      one trains them.
-    </p>
+    <p className="text-sm sm:text-base md:text-lg"> 91% of employers say <b>soft skills</b> are more important than hard skills — but no one trains them. </p>
   </motion.div>
 
   {/* Imagen (arriba de los glows) */}
