@@ -7,17 +7,6 @@ import girlCenter from "../assets/girlCenter.png";
 import chessPiece from "../assets/chessImg.png";
 
 const Reason_Section = () => {
-  const piecesPattern = [
-    "gray",
-    "white",
-    "gray",
-    "gray",
-    "white",
-    "gray",
-    "gray",
-    "white",
-    "gray",
-  ];
   return (
     <>
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-background">
@@ -139,6 +128,46 @@ const Reason_Section = () => {
       transform: "translateY(0%)",
     }}
   />
+
+{/* Globo izquierdo */}
+  <motion.div
+    className="absolute bg-[#8B5CF6] text-white px-5 py-3 rounded-2xl shadow-lg max-w-[380px]"
+    style={{
+      top: "15%", // alineado con el torso de la chica
+      left: "10%",
+      transform: "translateY(-50%)",
+      width: "clamp(220px, 28vw, 340px)",
+    }}
+    initial={{ opacity: 0, x: -50 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.8 }}
+  >
+    <p className="text-sm sm:text-base md:text-lg">
+      You spent years in school... <br />
+      ...but no one taught you how to <b>lead</b>, stay calm under pressure,
+      or speak with clarity.
+    </p>
+  </motion.div>
+
+  {/* Globo derecho */}
+  <motion.div
+    className="absolute bg-[#8B5CF6] text-white px-5 py-3 rounded-2xl shadow-lg max-w-[380px]"
+    style={{
+      top: "15%",
+      right: "10%",
+      transform: "translateY(-50%)",
+      width: "clamp(220px, 28vw, 340px)",
+    }}
+    initial={{ opacity: 0, x: 50 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.8 }}
+  >
+    <p className="text-sm sm:text-base md:text-lg">
+      91% of employers say <b>soft skills</b> are more important than hard
+      skills — but no
+      one trains them.
+    </p>
+  </motion.div>
 
   {/* Imagen (arriba de los glows) */}
   <img
