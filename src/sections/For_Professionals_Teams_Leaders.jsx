@@ -29,7 +29,7 @@ export default function For_Professionals_Teams_Leaders() {
   }
 
   return (
-    <div className="flex flex-col gap-5 multi-gradient-bg px-[4vw] pt-10">
+    <div className="flex flex-col gap-5 multi-gradient-bg pb-10 px-[4vw] pt-10">
       {/* HEADER */}
       <div className="flex flex-col gap-5 text-center">
         <h1 className="text-4xl text-black font-bold">
