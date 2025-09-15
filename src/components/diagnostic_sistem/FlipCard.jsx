@@ -1,11 +1,10 @@
 // src/components/FlipCard.jsx
 
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import CardDesign from './CardDesign'; 
-import { cardData } from './CardData'; 
+import { cardData } from '../../data/card_data'; 
 import flecha from "../../assets/flecha.png"
-import { div } from 'motion/react-client';
 
 const NUM_STACKED_CARDS = 3; 
 
