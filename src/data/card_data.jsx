@@ -1,18 +1,18 @@
 
-import RadarChart from "./radarChart";
+import RadarChart from "../components/diagnostic_sistem/radarChart";
 
-import iconCard1 from '../../assets/icon-card1.png'
-import iconCard2 from '../../assets/icon-card2.png'
-import iconCard3 from '../../assets/icon-card3.png'
-import iconCard4 from '../../assets/icon-card4.png'
-import iconCard5 from '../../assets/icon-card5.png'
+import iconCard1 from '../assets/icon-card1.png'
+import iconCard2 from '../assets/icon-card2.png'
+import iconCard3 from '../assets/icon-card3.png'
+import iconCard4 from '../assets/icon-card4.png'
+import iconCard5 from '../assets/icon-card5.png'
 
-import selector from '../../assets/selector.png'
-import skillCard1 from '../../assets/skill-card1.png'
-import skillCard2 from '../../assets/skill-card2.png'
-import skillCard3 from '../../assets/skill-card3.png'
-import skillCard4 from '../../assets/skill-card4.png'
-import skillCard5 from '../../assets/skill-card5.png'
+import selector from '../assets/selector.png'
+import skillCard1 from '../assets/skill-card1.png'
+import skillCard2 from '../assets/skill-card2.png'
+import skillCard3 from '../assets/skill-card3.png'
+import skillCard4 from '../assets/skill-card4.png'
+import skillCard5 from '../assets/skill-card5.png'
 
 const icons = [iconCard1, iconCard2, iconCard3, iconCard4, iconCard5, iconCard5, iconCard5, iconCard5, iconCard5]
 
