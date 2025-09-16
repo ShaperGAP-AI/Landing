@@ -38,13 +38,13 @@ export default function For_Professionals_Teams_Leaders() {
         <p className="text-black/50">Every journey is different. Here’s how Shaper’s growth DNA fits each path.</p>
       </div>
       {/* SLIDE */}
-      <div className="flex flex-col gap-10 h-full py-5 lg:h-screen lg:pb-0">
+      <div className="flex flex-col gap-5 h-full py-5 lg:h-screen lg:pb-0">
         {/* NAV */}
-        <div className="flex gap-5 mx-auto lg:w-[40vw] lg:justify-between">
+        <div className="w-full flex justify-around mx-auto lg:w-[40vw]">
           {publicTargets.map((portrait, i) => (
-            <div key={`portrait-${portrait.id}`} className="h-15 aspect-square flex flex-col items-center">
+            <div key={`portrait-${portrait.id}`} className="flex flex-col items-center gap-1">
               <div
-                className={`h-full aspect-square relative transition cursor-pointer ${
+                className={`h-15 aspect-square relative transition cursor-pointer ${
                   currentIndex === i ? "" : "saturate-0"
                 }`}
                 onClick={() => handlePortraitClick(i)}
@@ -58,7 +58,11 @@ export default function For_Professionals_Teams_Leaders() {
                 )}
                 <img src={portrait.portraitSrc} alt={portrait.portraitAlt} className="relative z-10" />
               </div>
-              <span className={`text-nowrap text-black ${currentIndex === i ? "font-bold" : ""}`}>{portrait.name}</span>
+              <div className="w-15 flex justify-center">
+                <span className={`text-black text-[3.5vw] text-nowrap ${currentIndex === i ? "font-bold" : ""} sm:text-base xl:text-xl`}>
+                  {portrait.name}
+                </span>
+              </div>
             </div>
           ))}
         </div>
