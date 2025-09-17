@@ -130,40 +130,57 @@ const Reason_Section = () => {
   />
 
 {/* Globo izquierdo */}
-  <motion.div
-    className="absolute bg-[#8B5CF6] text-white px-5 py-2 rounded-2xl shadow-lg max-w-[380px]"
-    style={{
-      top: "8%", // alineado con el torso de la chica
-      left: "10%",
-      transform: "translateY(-50%)",
-      width: "clamp(220px, 28vw, 340px)",
-    }}
-    initial={{ opacity: 0, x: -50 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.8 }}
+<motion.div
+  className="absolute bg-[#886FFF] text-white px-4 py-2 rounded-2xl shadow-lg flex items-center justify-center"
+  style={{
+    top: "8%",
+    left: "13%",
+    transform: "translateY(-50%)",
+    width: "clamp(280px, 25vw, 3600px)",
+    height: "160px",
+  }}
+  initial={{ opacity: 0, x: -50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  <p
+    className="text-[22px] leading-[34px] font-medium text-center"
+    style={{ color: "#FFFFFFCC" }}
   >
-    <p className="text-sm sm:text-base md:text-lg">
-      You spent years in school... <br />
-      ...but no one taught you how to <b>lead</b>, stay calm under pressure,
+    You spent years in school... <br />
+    but no one taught you how to <br />
+    <span className="font-semibold text-white">
+      lead, stay calm under pressure, <br />
       or speak with clarity.
-    </p>
-  </motion.div>
+    </span>
+  </p>
+</motion.div>
 
-  {/* Globo derecho */}
-  <motion.div
-    className="absolute bg-[#8B5CF6] text-white px-9 py-2 rounded-2xl shadow-lg max-w-[380px]"
-    style={{
-      top: "8%",
-      right: "10%",
-      transform: "translateY(-50%)",
-      width: "clamp(220px, 28vw, 340px)",
-    }}
-    initial={{ opacity: 0, x: 50 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.8 }}
+{/* Globo derecho */}
+<motion.div
+  className="absolute bg-[#886FFF] text-white px-4 py-2 rounded-2xl shadow-lg flex items-center justify-center"
+  style={{
+    top: "8%",
+    right: "13%",
+    transform: "translateY(-50%)",
+    width: "clamp(280px, 25vw, 3600px)",
+    height: "160px",
+  }}
+  initial={{ opacity: 0, x: 50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  <p
+    className="text-[22px] leading-[34px] font-medium text-center"
+    style={{ color: "#FFFFFFCC" }}
   >
-    <p className="text-sm sm:text-base md:text-lg"> 91% of employers say <b>soft skills</b> are more important than hard skills — but no one trains them. </p>
-  </motion.div>
+    <span className="font-semibold text-white">91% of employers</span> say <br />
+    <span className="font-semibold text-white">soft skills</span> are more important <br />
+    than hard skills — <br />
+    <span className="font-semibold text-white">but no one trains them.</span>
+  </p>
+</motion.div>
+
 
   {/* Imagen (arriba de los glows) */}
   <img
@@ -176,6 +193,8 @@ const Reason_Section = () => {
       height: "clamp(400px, 70vh, 786px)",
       width: "auto",
       pointerEvents: "auto",
+      transform: "scaleX(-1)",
+      filter: "saturate(1.5)",
     }}
   />
 </div>
