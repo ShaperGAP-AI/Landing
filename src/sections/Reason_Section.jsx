@@ -73,78 +73,98 @@ const Reason_Section = () => {
 <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-background">
   <FondoCuadros />
 
-<div className="relative flex flex-col items-center justify-end w-full">
+<div className="relative w-full flex flex-col items-center lg:block">
+  {/* Imagen chica */}
+  <img
+    src={girlCenter}
+    alt="Girl center"
+    className="relative z-10 object-contain mx-auto"
+    style={{
+      height: "clamp(400px, 70vh, 786px)",
+      transform: "scaleX(-1)",
+      filter: "saturate(1.5)",
+    }}
+  />
+
   {/* Glow: capa amplia y sutil (fondo) */}
-  <div
-    aria-hidden
-    style={{
-      position: "absolute",
-      bottom: "-6px",
-      width: "clamp(180px, 32vw, 3200px)",
-      height: "clamp(40px, 8vh, 160px)",
-      borderRadius: "50%",
-      background:
-        "radial-gradient(ellipse at center, rgba(136,111,255,0.25) 0%, rgba(136,111,255,0.12) 40%, transparent 70%)",
-      filter: "blur(25px)",
-      zIndex: 0,
-      pointerEvents: "none",
-      opacity: 1,
-      transform: "translateY(6%)",
-    }}
-  />
+<div
+  aria-hidden
+  style={{
+    position: "absolute",
+    bottom: "-6px",
+    left: "50%",
+    transform: "translateX(-50%) translateY(6%)",
+    width: "clamp(180px, 32vw, 3200px)",
+    height: "clamp(40px, 8vh, 160px)",
+    borderRadius: "50%",
+    background:
+      "radial-gradient(ellipse at center, rgba(136,111,255,0.25) 0%, rgba(136,111,255,0.12) 40%, transparent 70%)",
+    filter: "blur(30px)",
+    zIndex: 0,
+    pointerEvents: "none",
+    opacity: 1,
+  }}
+/>
 
-  {/* Glow: capa intermedia (color más definido) */}
-  <div
-    aria-hidden
-    style={{
-      position: "absolute",
-      bottom: "-2px",
-      width: "clamp(170px, 28vw, 270px)",
-      height: "clamp(36px, 6.6vh, 120px)",
-      borderRadius: "50%",
-      background:
-        "radial-gradient(ellipse at center, rgba(136,111,255,0.78) 0%, rgba(136,111,255,0.38) 30%, rgba(136,111,255,0.12) 55%, transparent 75%)",
-      filter: "blur(10px)",
-      zIndex: 1,
-      pointerEvents: "none",
-      transform: "translateY(3%)",
-    }}
-  />
+{/* Glow: capa intermedia */}
+<div
+  aria-hidden
+  style={{
+    position: "absolute",
+    bottom: "-2px",
+    left: "50%",
+    transform: "translateX(-50%) translateY(3%)",
+    width: "clamp(170px, 28vw, 270px)",
+    height: "clamp(36px, 6.6vh, 120px)",
+    borderRadius: "50%",
+    background:
+      "radial-gradient(ellipse at center, rgba(136,111,255,0.78) 0%, rgba(136,111,255,0.38) 30%, rgba(136,111,255,0.12) 55%, transparent 75%)",
+    filter: "blur(10px)",
+    zIndex: 1,
+    pointerEvents: "none",
+  }}
+/>
 
-  {/* Glow: capa central y brillante (pequeña) */}
-  <div
-    aria-hidden
-    style={{
-      position: "absolute",
-      bottom: "2px",
-      width: "clamp(140px, 22vw, 230px)",
-      height: "clamp(20px, 4vh, 44px)",
-      borderRadius: "50%",
-      background:
-        "radial-gradient(ellipse at center, rgba(136, 111, 255, 1) 0%, rgba(136, 111, 255, 0.6) 35%, rgba(136, 111, 255, 0.15) 65%, transparent 85%)",
-      filter: "blur(10px)",
-      zIndex: 2,
-      pointerEvents: "none",
-      transform: "translateY(0%)",
-    }}
-  />
+{/* Glow: capa central */}
+<div
+  aria-hidden
+  style={{
+    position: "absolute",
+    bottom: "2px",
+    left: "50%",
+    transform: "translateX(-50%)",
+    width: "clamp(140px, 22vw, 230px)",
+    height: "clamp(20px, 4vh, 44px)",
+    borderRadius: "50%",
+    background:
+      "radial-gradient(ellipse at center, rgba(136, 111, 255, 1) 0%, rgba(136, 111, 255, 0.6) 35%, rgba(136, 111, 255, 0.15) 65%, transparent 85%)",
+    filter: "blur(10px)",
+    zIndex: 2,
+    pointerEvents: "none",
+  }}
+/>
+
+</div>
+
 
 {/* Globo izquierdo */}
 <motion.div
-  className="absolute bg-[#886FFF] text-white px-4 py-2 rounded-2xl shadow-lg flex items-center justify-center"
+  className="bg-[#886FFF] text-white rounded-2xl shadow-lg flex items-center justify-center 
+  px-[clamp(12px,2vw,20px)] py-[clamp(8px,1.5vw,16px)] 
+  mb-6 lg:mb-0 lg:absolute"
   style={{
-    top: "8%",
+    top: "12%",
     left: "13%",
     transform: "translateY(-50%)",
     width: "clamp(280px, 25vw, 3600px)",
-    height: "160px",
+    aspectRatio: "2.25 / 1",
   }}
   initial={{ opacity: 0, x: -50 }}
   whileInView={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.8 }}
 >
   <p
-    className="text-[22px] leading-[34px] font-medium text-center"
+    className="text-[clamp(16px,1.5vw,22px)] leading-[clamp(24px,2vw,34px)] font-medium text-center"
     style={{ color: "#FFFFFFCC" }}
   >
     You spent years in school... <br />
@@ -158,20 +178,22 @@ const Reason_Section = () => {
 
 {/* Globo derecho */}
 <motion.div
-  className="absolute bg-[#886FFF] text-white px-4 py-2 rounded-2xl shadow-lg flex items-center justify-center"
+  className="bg-[#886FFF] text-white rounded-2xl shadow-lg flex items-center justify-center 
+  px-[clamp(12px,2vw,20px)] py-[clamp(8px,1.5vw,16px)] 
+  mt-6 lg:mt-0 lg:absolute"
   style={{
-    top: "8%",
+    top: "12%",
     right: "13%",
     transform: "translateY(-50%)",
     width: "clamp(280px, 25vw, 3600px)",
-    height: "160px",
+    aspectRatio: "2.25 / 1",
   }}
   initial={{ opacity: 0, x: 50 }}
   whileInView={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.8 }}
 >
   <p
-    className="text-[22px] leading-[34px] font-medium text-center"
+    className="text-[clamp(16px,1.5vw,22px)] leading-[clamp(24px,2vw,34px)] font-medium text-center"
     style={{ color: "#FFFFFFCC" }}
   >
     <span className="font-semibold text-white">91% of employers</span> say <br />
@@ -181,23 +203,6 @@ const Reason_Section = () => {
   </p>
 </motion.div>
 
-
-  {/* Imagen (arriba de los glows) */}
-  <img
-    src={girlCenter}
-    alt="Girl center"
-    className="object-contain"
-    style={{
-      position: "relative",
-      zIndex: 10,
-      height: "clamp(400px, 70vh, 786px)",
-      width: "auto",
-      pointerEvents: "auto",
-      transform: "scaleX(-1)",
-      filter: "saturate(1.5)",
-    }}
-  />
-</div>
 
 </section>
 
