@@ -1,12 +1,12 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
-const FadeInDiv = ({ children, duration = 1.5, delay = 0, ...props }) => {
+const FadeInDiv = ({ children, duration = 0.8, delay = 0, yOffset = 20, ...props }) => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: duration, delay: delay }}
+      initial={{ opacity: 0, y: yOffset }}
+      whileInView={{ opacity: 1, y: 0 }} 
+      viewport={{ once: false }} 
+      transition={{ duration: duration, delay: delay, ease: "easeOut" }}
       {...props}
     >
       {children}

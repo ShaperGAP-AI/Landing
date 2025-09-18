@@ -24,6 +24,12 @@ export default function Hero() {
     [1, 0]
   );
 
+  const backgroundDisplay = useTransform(
+    scrollY,
+    [0, 500],
+    ["inline", "none"]
+  );
+
   // Logo and title animations: diferente para móvil y PC
   const logoContainerTranslateY = useTransform(
     scrollY,
@@ -82,7 +88,7 @@ export default function Hero() {
       {/* Background that moves and fades */}
       <motion.div
         ref={ref}
-        style={{ opacity: backgroundOpacity }}
+        style={{ opacity: backgroundOpacity, display: backgroundDisplay }}
         className='multi-gradient-bg lg:h-screen h-full overflow-hidden fixed top-0 left-0 w-full z-0'
       >
       </motion.div>
@@ -98,15 +104,17 @@ export default function Hero() {
           }}
           className='h-fit mt-68 lg:-mb-42 justify-center flex flex-col items-center text-center pb-4'
         >
-          <div className='flex justify-center items-end'>
-            <img className='h-12' src={Logo} alt="Logo" />
-            <h1 className='text-slate-900 text-4xl md:text-6xl font-sans font-bold'>Shaper</h1>
-          </div>
-          {/* New text that appears on scroll */}
-          <motion.div
-            style={{ opacity: newTextOpacity }}
-            className="mt-4"
-          >
+          <FadeInDiv>
+            <div className='flex justify-center items-end'>
+              <img className='h-12' src={Logo} alt="Logo" />
+              <h1 className='text-slate-900 text-4xl md:text-6xl font-sans font-bold'>Shaper</h1>
+            </div>
+          </FadeInDiv>
+            {/* New text that appears on scroll */}
+            <motion.div
+              style={{ opacity: newTextOpacity }}
+              className="mt-4"
+            >
             <FadeInDiv>
               <h2 className='text-xl md:text-6xl font-bold leading-tight'>
                 Unlock <span className="text-lightpurple">Who You’re</span>  <br />  <span className="text-lightpurple">Meant </span> to Become.

@@ -7,6 +7,7 @@
   --darkpurple: #6a51e1;
   --purple: #886fff;
   --lightpurple: #be80ff;
+  --lighterpurple: #bdafff;
 }
 
 @theme {
@@ -15,6 +16,7 @@
   --color-darkpurple: var(--darkpurple);
   --color-purple: var(--purple);
   --color-lightpurple: var(--lightpurple);
+  --color-lighterpurple: var(--lighterpurple);
 }
 
 body {
@@ -32,6 +34,10 @@ body {
     radial-gradient(at 60% 70%, rgba(126, 169, 255, 0.849) 0%, rgba(255, 255, 255, 0) 70%),
     radial-gradient(at 70% 80%, rgba(68, 85, 243, 0.863) 0%, rgba(255, 255, 255, 0) 70%),
     radial-gradient(at 80% 90%, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.perspective-1000 {
+  perspective: 1000px;
 }
 
 .radial-gradient-purple {
