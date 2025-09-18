@@ -1,5 +1,5 @@
 
-import RadarChart from "../components/diagnostic_sistem/radarChart";
+import RadarChart from "../components/diagnostic_sistem/RadarChart";
 
 import iconCard1 from '../assets/icon-card1.png'
 import iconCard2 from '../assets/icon-card2.png'
