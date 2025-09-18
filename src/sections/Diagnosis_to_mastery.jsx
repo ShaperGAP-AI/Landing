@@ -12,7 +12,7 @@ import tablet4 from "../assets/tablet4.png";
 import tablet5 from "../assets/tablet5.png";
 
 import flecha from "../assets/flecha.png";
-import flechaTransparente from "../assets/flecha-transparente.png";
+import flechaTransparente from "../assets/flecha-Transparente.png";
 
 import SplitText from "../animations/SplitText";
 import DragFromRight from "../animations/DragFromRight";
