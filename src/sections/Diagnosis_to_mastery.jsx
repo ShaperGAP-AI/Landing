@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import FondoCuadros from "../components/FondoCuadros";
 
-import lineaCurva from "../assets/linea-curva.png";
+import lineaCurva from "../assets/linea-curva-diagnostic-to-mastery.png";
 
 import tablet1 from "../assets/tablet1.png";
 import tablet2 from "../assets/tablet2.png"
