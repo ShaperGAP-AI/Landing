@@ -8,11 +8,11 @@ import pro from '../assets/PRO.png';
 import elite from '../assets/ELITE.png';
 import DragFromRight from "../animations/DragFromRight";
 
-import frame1p from '../assets/frame1p.png';
-import frame2p from '../assets/frame2p.png';
-import frame3p from '../assets/frame3p.png';
-import frame4p from '../assets/frame4p.png';
-import frame5p from '../assets/frame5p.png';
+import frame1p from '../assets/Frame1P.png';
+import frame2p from '../assets/Frame2P.png';
+import frame3p from '../assets/Frame3P.png';
+import frame4p from '../assets/Frame4P.png';
+import frame5p from '../assets/Frame5P.png';
 
 export default function Plans_Screen() {
   return (
