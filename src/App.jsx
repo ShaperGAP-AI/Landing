@@ -9,6 +9,7 @@ import For_Professionals_Teams_Leaders from "./sections/For_Professionals_Teams_
 import Diagnostic_Sistem from "./sections/Diagnostic_Sistem";
 import Why_Its_Safe from "./sections/Why_Its_Safe";
 import What_Users_Say from "./sections/What_Users_Say";
+import Cta_Strip from "./sections/Cta_Strip";
 
 import "./App.css";
 
@@ -26,6 +27,7 @@ function App() {
       <For_Professionals_Teams_Leaders />
       <Why_Its_Safe />
       <What_Users_Say />
+      <Cta_Strip/>
     </>
   );
 }
