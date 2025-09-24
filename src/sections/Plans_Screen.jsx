@@ -4,15 +4,15 @@ import SplitText from "../animations/SplitText"
 import FadeInDiv from "../animations/FadeInDiv"
 import DragFromLeft from "../animations/DragFromLeft"
 
-import pro from '../assets/PRO.png';
-import elite from '../assets/ELITE.png';
+import pro from '../assets/Plans_Screen/PRO.png';
+import elite from '../assets/Plans_Screen/ELITE.png';
 import DragFromRight from "../animations/DragFromRight";
 
-import frame1p from '../assets/Frame1P.png';
-import frame2p from '../assets/Frame2P.png';
-import frame3p from '../assets/Frame3P.png';
-import frame4p from '../assets/Frame4P.png';
-import frame5p from '../assets/Frame5P.png';
+import frame1p from '../assets/Plans_Screen/Frame1P.png';
+import frame2p from '../assets/Plans_Screen/Frame2P.png';
+import frame3p from '../assets/Plans_Screen/Frame3P.png';
+import frame4p from '../assets/Plans_Screen/Frame4P.png';
+import frame5p from '../assets/Plans_Screen/Frame5P.png';
 
 export default function Plans_Screen() {
   return (

@@ -1,4 +1,4 @@
-import Icosahedron from "../../assets/icosahedron.png";
+import Icosahedron from "../../assets/Core_Loop_Section/icosahedron.png";
 
 export default function Evolution_Based_Learning() {
   return (

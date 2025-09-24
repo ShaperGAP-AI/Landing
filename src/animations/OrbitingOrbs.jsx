@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import useWindowSize from '../hooks/useWindowSize';
-import orbita from '../assets/orbita.png';
+import orbita from '../assets/Hero/orbita.png';
 
 export default function OrbitingOrbs() {
   const [width] = useWindowSize();

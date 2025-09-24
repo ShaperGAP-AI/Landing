@@ -1,8 +1,7 @@
-import image from '../assets/hero-image.png';
-import skillImage from "../assets/Skill-circle.png";
-import fondo from '../assets/fondo-Image.png';
-import orbita from '../assets/orbita.png';
-import Logo from '../assets/logo.png';
+import image from '../assets/Hero/hero-image.png';
+import skillImage from "../assets/Hero/Skill-circle.png";
+import fondo from '../assets/Hero/fondo-Image.png';
+import Logo from '../assets/Shared_Images/logo.png';
 import FadeInDiv from '../animations/FadeInDiv';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef} from 'react';

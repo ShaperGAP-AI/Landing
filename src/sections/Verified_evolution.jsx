@@ -1,21 +1,21 @@
 import React from 'react'
 import FondoCuadros from '../components/FondoCuadros'
 
-import telefono from '../assets/telefono.png'
+import telefono from '../assets/Verified_evolution/telefono.png'
 
-import iconBrain from '../assets/icon-brain.png'
-import iconDoc from '../assets/icon-doc.png'
-import iconShield from '../assets/icon-shield.png'
-import iconUser from '../assets/icon-user.png'
+import iconBrain from '../assets/Shared_Images/icon-brain.png'
+import iconDoc from '../assets/Shared_Images/icon-doc.png'
+import iconShield from '../assets/Shared_Images/icon-shield.png'
+import iconUser from '../assets/Shared_Images/icon-user.png'
 
-import rectangleicon1 from '../assets/rectangle-icon1.png'
-import rectangleicon2 from '../assets/rectangle-icon2.png'
-import rectangleicon3 from '../assets/rectangle-icon3.png'
-import rectangleicon4 from '../assets/rectangle-icon4.png' 
+import rectangleicon1 from '../assets/Verified_evolution/rectangle-icon1.png'
+import rectangleicon2 from '../assets/Verified_evolution/rectangle-icon2.png'
+import rectangleicon3 from '../assets/Verified_evolution/rectangle-icon3.png'
+import rectangleicon4 from '../assets/Verified_evolution/rectangle-icon4.png' 
 
-import boxLinked from '../assets/box-linked.png'
-import linked from '../assets/linked.png'
-import iconPlay from '../assets/icon-play.png'
+import boxLinked from '../assets/Verified_evolution/box-linked.png'
+import linked from '../assets/Verified_evolution/linked.png'
+import iconPlay from '../assets/Verified_evolution/icon-play.png'
 
 import SplitText from '../animations/SplitText'
 import TypingEffect from '../animations/TypingEffect'

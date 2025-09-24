@@ -3,7 +3,7 @@ import FondoCuadros from "../components/FondoCuadros"
 import SplitText from "../animations/SplitText"
 import FadeInDiv from "../animations/FadeInDiv"
 
-import ctaImage from '../assets/cta-image.png';
+import ctaImage from '../assets/Cta_Strip/cta-image.png';
 
 export default function Cta_Strip() {
   return (

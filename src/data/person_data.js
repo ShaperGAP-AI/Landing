@@ -1,20 +1,18 @@
-import { desc } from 'motion/react-client';
+import person1 from '../assets/What_Users_Say/person1.png';
+import person2 from '../assets/What_Users_Say/person2.png';
+import person3 from '../assets/What_Users_Say/person3.png';
+import person4 from '../assets/What_Users_Say/person4.png';
+import person5 from '../assets/What_Users_Say/person5.png';
+import person6 from '../assets/What_Users_Say/person6.png';
 
-import person1 from '../assets/person1.png';
-import person2 from '../assets/person2.png';
-import person3 from '../assets/person3.png';
-import person4 from '../assets/person4.png';
-import person5 from '../assets/person5.png';
-import person6 from '../assets/person6.png';
-
-import badge1 from '../assets/badge1.png';
-import badge2 from '../assets/badge2.png';
-import badge3 from '../assets/badge3.png';
-import badge4 from '../assets/badge4.png';
-import badge5 from '../assets/badge5.png';
-import badge6 from '../assets/badge6.png';
-import badge7 from '../assets/badge7.png';
-import badge8 from '../assets/badge8.png';
+import badge1 from '../assets/What_Users_Say/badge1.png';
+import badge2 from '../assets/What_Users_Say/badge2.png';
+import badge3 from '../assets/What_Users_Say/badge3.png';
+import badge4 from '../assets/What_Users_Say/badge4.png';
+import badge5 from '../assets/What_Users_Say/badge5.png';
+import badge6 from '../assets/What_Users_Say/badge6.png';
+import badge7 from '../assets/What_Users_Say/badge7.png';
+import badge8 from '../assets/What_Users_Say/badge8.png';
 
 export const cardData = [
     {

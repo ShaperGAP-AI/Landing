@@ -1,14 +1,14 @@
 import FondoCuadros from '../components/FondoCuadros'
 
-import imgWhatUserSay from '../assets/img-what-user-say.png'
+import imgWhatUserSay from '../assets/Why_Its_Safe/img-what-user-say.png'
 
-import iconBrain from '../assets/icon-brain.png'
-import iconDoc from '../assets/icon-doc.png'
-import iconShield from '../assets/icon-shield.png'
-import iconUser from '../assets/icon-user.png'
-import iconAtom from '../assets/icon-atom.png'
+import iconBrain from '../assets/Shared_Images/icon-brain.png'
+import iconDoc from '../assets/Shared_Images/icon-doc.png'
+import iconShield from '../assets/Shared_Images/icon-shield.png'
+import iconUser from '../assets/Shared_Images/icon-user.png'
+import iconAtom from '../assets/Shared_Images/icon-atom.png'
 
-import ArrowTopRight from '../assets/ArrowTopRight.png'
+import ArrowTopRight from '../assets/Shared_Images/ArrowTopRight.png'
 import MainButton from '../components/MainButton'
 
 import TypingEffect from '../animations/TypingEffect'

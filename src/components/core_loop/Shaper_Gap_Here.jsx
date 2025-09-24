@@ -1,7 +1,7 @@
-import HeroCharacter from "../../assets/hero-character.png";
-import BgObject1 from "../../assets/core-loop-bg-object1.png";
-import BgObject2 from "../../assets/core-loop-bg-object2.png";
-import BgObject3 from "../../assets/core-loop-bg-object3.png";
+import HeroCharacter from "../../assets/Core_Loop_Section/hero-character.png";
+import BgObject1 from "../../assets/Core_Loop_Section/core-loop-bg-object1.png";
+import BgObject2 from "../../assets/Core_Loop_Section/core-loop-bg-object2.png";
+import BgObject3 from "../../assets/Core_Loop_Section/core-loop-bg-object3.png";
 
 export default function Shaper_Gap_Here() {
   return (

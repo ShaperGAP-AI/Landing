@@ -1,11 +1,11 @@
-import ArrowThin from "../../assets/core-loop-arrow-thin.png";
-import ArrowThick from "../../assets/core-loop-arrow-thick.png";
-import CoreLoopAvatar from "../../assets/core-loop-avatar.png";
+import ArrowThin from "../../assets/Core_Loop_Section/core-loop-arrow-thin.png";
+import ArrowThick from "../../assets/Core_Loop_Section//core-loop-arrow-thick.png";
+import CoreLoopAvatar from "../../assets/Core_Loop_Section/core-loop-avatar.png";
 import CoreLoopBubble from "./CoreLoopBubble";
-import PolygonPurple from "../../assets/polygon-purple.png";
-import PolygonBlue from "../../assets/polygon-blue.png";
-import PolygonGreen from "../../assets/polygon-green.png";
-import PolygonYellow from "../../assets/polygon-yellow.png";
+import PolygonPurple from "../../assets/Core_Loop_Section/polygon-purple.png";
+import PolygonBlue from "../../assets/Core_Loop_Section/polygon-blue.png";
+import PolygonGreen from "../../assets/Core_Loop_Section/polygon-green.png";
+import PolygonYellow from "../../assets/Core_Loop_Section/polygon-yellow.png";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import useContainerHeight from "../../hooks/useContainerHeight";

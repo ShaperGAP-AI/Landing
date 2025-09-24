@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import CardDesign from './CardDesign'; 
 import { cardData } from '../../data/card_data'; 
-import flecha from "../../assets/flecha.png"
+import flecha from "../../assets/Shared_Images/flecha.png"
 
 const NUM_STACKED_CARDS = 3; 
 

@@ -3,8 +3,8 @@ import SplitText from '../animations/SplitText';
 
 import FondoCuadros from '../components/FondoCuadros';
 
-import flecha from '../assets/flecha.png';
-import comillas from '../assets/comillas.png';
+import flecha from '../assets/Shared_Images/flecha.png';
+import comillas from '../assets/What_Users_Say/comillas.png';
 
 import { cardData } from '../data/person_data';
 import { useEffect, useState, useRef, useCallback } from 'react';

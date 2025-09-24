@@ -1,5 +1,4 @@
-import React from 'react'
-import fondoCuadros from '../assets/cuadros-fondo-liso.png'
+import fondoCuadros from '../assets/Shared_Images/cuadros-fondo-liso.png'
 
 export default function FondoCuadros() {
   return (

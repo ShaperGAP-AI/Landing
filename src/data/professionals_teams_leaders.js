@@ -1,11 +1,11 @@
-import StudentPortrait from "../assets/student-portrait.png";
-import StudentAvatar from "../assets/student-avatar.png";
-import ProfessionalPortrait from "../assets/professional-portrait.png";
-import ProfessionalAvatar from "../assets/professional-avatar.png";
-import CareerShifterPortrait from "../assets/career-shifter-portrait.png";
-import CareerShifterAvatar from "../assets/career-shifter-avatar.png";
-import EmployerPortrait from "../assets/employer-portrait.png";
-import EmployerAvatar from "../assets/employer-avatar.png";
+import StudentPortrait from "../assets/For_Professionals_Teams_Leaders/student-portrait.png";
+import StudentAvatar from "../assets/For_Professionals_Teams_Leaders/student-avatar.png";
+import ProfessionalPortrait from "../assets/For_Professionals_Teams_Leaders/professional-portrait.png";
+import ProfessionalAvatar from "../assets/For_Professionals_Teams_Leaders/professional-avatar.png";
+import CareerShifterPortrait from "../assets/For_Professionals_Teams_Leaders/career-shifter-portrait.png";
+import CareerShifterAvatar from "../assets/For_Professionals_Teams_Leaders/career-shifter-avatar.png";
+import EmployerPortrait from "../assets/For_Professionals_Teams_Leaders/employer-portrait.png";
+import EmployerAvatar from "../assets/For_Professionals_Teams_Leaders/employer-avatar.png";
 
 const publicTargets = [
   {

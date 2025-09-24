@@ -1,5 +1,5 @@
 import { motion, usePresenceData } from "framer-motion";
-import DNAImg from "../../assets/dna.png";
+import DNAImg from "../../assets/For_Professionals_Teams_Leaders/dna.png";
 
 export default function DNA({ info }) {
   const direction = usePresenceData();

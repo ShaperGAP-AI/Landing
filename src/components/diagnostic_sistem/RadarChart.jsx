@@ -1,6 +1,3 @@
-// src/components/RadarChart.jsx
-
-import React from 'react';
 import { motion } from 'framer-motion';
 import getPathForRadius from '../../hooks/getPathForRadius';
 

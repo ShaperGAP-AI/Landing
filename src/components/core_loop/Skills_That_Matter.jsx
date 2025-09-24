@@ -1,11 +1,11 @@
-import IlluminatedBrain from "../../assets/illuminated-brain.png";
-import ShaperLogo from "../../assets/logo.png";
-import AdaptativeEvolution from "../../assets/adaptative-evolution.png";
-import CommanderChange from "../../assets/commander-of-change.png";
-import CreativeCatalyst from "../../assets/creative-catalyst.png";
-import FlexStart from "../../assets/flex-start.png";
-import Knowledge from "../../assets/knowledge.png";
-import StrategicMind from "../../assets/strategic-mind.png";
+import IlluminatedBrain from "../../assets/Core_Loop_Section/illuminated-brain.png"
+import ShaperLogo from "../../assets/Shared_Images/logo.png";
+import AdaptativeEvolution from "../../assets/Core_Loop_Section/adaptative-evolution.png";
+import CommanderChange from "../../assets/Core_Loop_Section/commander-of-change.png";
+import CreativeCatalyst from "../../assets/Core_Loop_Section/creative-catalyst.png";
+import FlexStart from "../../assets/Core_Loop_Section/flex-start.png";
+import Knowledge from "../../assets/Core_Loop_Section/knowledge.png";
+import StrategicMind from "../../assets/Core_Loop_Section/strategic-mind.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 

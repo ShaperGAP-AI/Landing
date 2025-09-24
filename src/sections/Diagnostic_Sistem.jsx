@@ -2,10 +2,10 @@ import TypingEffect from '../animations/TypingEffect'
 import SplitText from '../animations/SplitText'
 import DragFromLeft from "../animations/DragFromLeft"
 
-import iconDiagnostic1 from '../assets/icon-diagnostic1.png'
-import iconDiagnostic2 from '../assets/icon-diagnostic2.png'
-import iconDiagnostic3 from '../assets/icon-diagnostic3.png'    
-import iconDiagnostic4 from '../assets/icon-diagnostic4.png'
+import iconDiagnostic1 from '../assets/Diagnostic_Sistem/icon-diagnostic1.png'
+import iconDiagnostic2 from '../assets/Diagnostic_Sistem/icon-diagnostic2.png'
+import iconDiagnostic3 from '../assets/Diagnostic_Sistem/icon-diagnostic3.png'    
+import iconDiagnostic4 from '../assets/Diagnostic_Sistem/icon-diagnostic4.png'
 
 import FlipCard from '../components/diagnostic_sistem/FlipCard'
 

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import DNA from "../components/for_professionals_teams_leaders/DNA";
-import ArrowLeft from "../assets/flecha-izq.png";
-import ArrowRight from "../assets/flecha.png";
+import ArrowLeft from "../assets/Shared_Images/flecha-izq.png";
+import ArrowRight from "../assets/Shared_Images/flecha.png";
 import publicTargets from "../data/professionals_teams_leaders";
 
 export default function For_Professionals_Teams_Leaders() {
