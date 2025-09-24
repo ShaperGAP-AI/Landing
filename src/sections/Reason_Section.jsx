@@ -1,8 +1,7 @@
-import React from "react";
 import { motion } from "framer-motion";
 import FondoCuadros from "../components/FondoCuadros";
-import girlImg from "../assets/womenWhyExists.png";
-import boyImg from "../assets/menWhyExists.png";
+import girlImg from "../assets/Reason_Section/womenWhyExists.png";
+import boyImg from "../assets/Reason_Section/menWhyExists.png";
 
 const Reason_Section = () => {
   return (
