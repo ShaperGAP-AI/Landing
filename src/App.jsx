@@ -12,7 +12,7 @@ import What_Users_Say from "./sections/What_Users_Say";
 import Cta_Strip from "./sections/Cta_Strip";
 import Plans_Screen from "./sections/Plans_Screen";
 import CTA from "./sections/CTA";
-import Footer from "./sections/footer";
+import Footer from "./sections/FooterSection";
 
 import "./App.css";
 
