@@ -4,6 +4,8 @@ import DNA from "../components/for_professionals_teams_leaders/DNA";
 import ArrowLeft from "../assets/Shared_Images/flecha-izq.png";
 import ArrowRight from "../assets/Shared_Images/flecha.png";
 import publicTargets from "../data/professionals_teams_leaders";
+import TypingEffect from "../animations/TypingEffect";
+import FadeInDiv from "../animations/FadeInDiv";
 
 export default function For_Professionals_Teams_Leaders() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,10 +34,12 @@ export default function For_Professionals_Teams_Leaders() {
     <div className="flex flex-col gap-5 multi-gradient-bg pb-10 px-[4vw] pt-10">
       {/* HEADER */}
       <div className="flex flex-col gap-5 text-center">
-        <h1 className="text-4xl text-black font-bold">
-          For the Curious, <span className="text-darkpurple">the Career Shifters, the Builders,</span> & the Brave.
-        </h1>
-        <p className="text-black/50">Every journey is different. Here’s how Shaper’s growth DNA fits each path.</p>
+        <FadeInDiv>
+          <h1 className="text-4xl text-black font-bold">
+            For the Curious, <span className="text-darkpurple">the Career Shifters, the Builders,</span> & the Brave.
+          </h1>
+        </FadeInDiv>
+        <TypingEffect className="text-black/50" text={"Every journey is different. Here’s how Shaper’s growth DNA fits each path."}></TypingEffect>
       </div>
       {/* SLIDE */}
       <div className="flex flex-col gap-5 h-full py-5 lg:h-screen lg:pb-0">

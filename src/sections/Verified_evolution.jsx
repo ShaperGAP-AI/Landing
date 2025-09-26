@@ -1,4 +1,3 @@
-import React from 'react'
 import FondoCuadros from '../components/FondoCuadros'
 
 import telefono from '../assets/Verified_evolution/telefono.png'
@@ -15,7 +14,7 @@ import rectangleicon4 from '../assets/Verified_evolution/rectangle-icon4.png'
 
 import boxLinked from '../assets/Verified_evolution/box-linked.png'
 import linked from '../assets/Verified_evolution/linked.png'
-import iconPlay from '../assets/Verified_evolution/icon-play.png'
+import iconPlay from '../assets/Shared_Images/icon-play.png'
 
 import SplitText from '../animations/SplitText'
 import TypingEffect from '../animations/TypingEffect'
@@ -132,13 +131,13 @@ export default function Verified_evolution() {
               </SplitText>
               <div className='lg:w-3/5 w-full mx-auto flex lg:flex-row flex-col justify-around'>
                 {/* FadeInDiv for each button afect the split text animation finished */}
-                <FadeInDiv delay={1.6}>
+                <FadeInDiv delay={0.6}>
                   <div className='flex bg-darkpurple transition-all duration-200 hover:shadow-md hover:shadow-white hover:-translate-y-1 justify-center rounded-full px-4 py-2 mt-5 cursor-pointer'>
                     <p className='my-auto mr-2'>Start My Growth Log</p>
                     <img src={iconPlay} alt="icon play" />
                   </div>
                 </FadeInDiv>
-                <FadeInDiv delay={1.6}>
+                <FadeInDiv delay={0.9}>
                   <div className='flex bg-background shadow shadow-white hover:bg-background/10 transition-all duration-200 hover:shadow-md justify-center hover:-translate-y-1 rounded-full px-4 py-2 mt-5 cursor-pointer'>
                     <p>Start My Growth Log</p>
                   </div>

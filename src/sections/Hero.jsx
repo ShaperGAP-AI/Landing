@@ -78,9 +78,9 @@ export default function Hero() {
   
   const skillImageTranslateY = useTransform(
     scrollY,
-    isMobile ? [0, 400] : [0, 0],
-    isMobile ? [0, 400] : [0, 0]
-  );
+    isMobile ? [0, 200] : [0, 0],
+    isMobile ? [0, 500] : [0, 0]
+  )
 
   return (
     <div className='relative'>

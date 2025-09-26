@@ -11,6 +11,8 @@ import Why_Its_Safe from "./sections/Why_Its_Safe";
 import What_Users_Say from "./sections/What_Users_Say";
 import Cta_Strip from "./sections/Cta_Strip";
 import Plans_Screen from "./sections/Plans_Screen";
+import CTA from "./sections/CTA";
+import Footer from "./sections/footer";
 
 import "./App.css";
 
@@ -30,6 +32,8 @@ function App() {
       <What_Users_Say />
       <Cta_Strip/>
       <Plans_Screen />
+      <CTA />
+      <Footer />
     </>
   );
 }

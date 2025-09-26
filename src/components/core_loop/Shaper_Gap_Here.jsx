@@ -5,7 +5,7 @@ import BgObject3 from "../../assets/Core_Loop_Section/core-loop-bg-object3.png";
 
 export default function Shaper_Gap_Here() {
   return (
-    <div className="relative h-screen flex flex-col items-center justify-between py-20">
+    <div className="relative h-screen flex flex-col items-center justify-between lg:py-20">
       <h1 className="text-black text-4xl font-bold text-center px-20 z-10 sm:text-5xl lg:text-6xl">
         <span className="whitespace-nowrap">
           Shaper GAP<sup>&reg;</sup>{" "}

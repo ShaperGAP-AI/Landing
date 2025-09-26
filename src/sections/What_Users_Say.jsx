@@ -90,10 +90,9 @@ export default function What_Users_Say() {
                     />
                 </div>
                 
-                {/* AÑADIMOS ANIMATEPRESENCE PARA GESTIONAR LA TRANSICIÓN */}
                 <AnimatePresence mode="wait">
                     <motion.div
-                        key={selectedUser.id} // La key es crucial para que AnimatePresence funcione
+                        key={selectedUser.id}
                         className="lg:mt-10 mt-5 w-full lg:w-3xl mx-auto bg-[#333333] relative z-20 rounded-2xl p-5 lg:p-8 lg:h-96 h-fit text-white"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -104,8 +103,7 @@ export default function What_Users_Say() {
                             <img src={comillas} alt="comillas" />
                         </div>
 
-                        {/* Reemplazamos TypingEffect por un <p> para una transición suave */}
-                        <p className="lg:text-lg text-md lg:mb-0 mb-10 text-left h-20"> {/* Se añade altura fija para evitar saltos de layout */}
+                        <p className="lg:text-lg text-md lg:mb-0 mb-16 text-left h-20"> 
                             {selectedUser.desc}
                         </p>
 

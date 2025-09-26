@@ -46,7 +46,7 @@ export default function Diagnostic_Sistem() {
                 </DragFromLeft>
             </div>
         </div>
-        <div className='lg:w-2/5 w-full'>
+        <div className='lg:w-2/5 lg:mb-0 mb-10 w-full'>
         <FlipCard />
       </div>
     </div>
